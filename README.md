@@ -632,7 +632,7 @@ function createDom(fiber) {
 const App = ({ name }) => {
   return <div>Hi {name}</div>;
 };
-Didact.render(<App name="defpis" />, container);
+const element = <App name="defpis" />;
 
 // 编译后
 const App = ({ name }) => {
@@ -666,7 +666,6 @@ function updateFunctionComponent(fiber) {
 }
 
 function updateHostComponent(fiber) {
-  // 添加节点元素到dom
   // 如果没有dom属性，根据fiber新构建
   if (!fiber.dom) {
     fiber.dom = createDom(fiber);

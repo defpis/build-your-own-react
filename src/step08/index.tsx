@@ -5,11 +5,11 @@ import Didact from "./didact";
 
 function Counter() {
   const [count, setCount] = Didact.useState(0);
-  const [count2, setCount2] = Didact.useState(0);
   return (
     <div>
-      <button onClick={() => setCount((c) => c + 1)}>Count: {count}</button>
-      <button onClick={() => setCount2((c) => c + 1)}>Count2: {count2}</button>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount((c) => c + 1)}>increase</button>
+      <button onClick={() => setCount((c) => c - 1)}>decrease</button>
     </div>
   );
 }
